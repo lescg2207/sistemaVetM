@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcfVeterinaria", "wcfVeterinaria\wcfVeterinaria.csproj", "{ABA492CE-0059-4A62-820B-12D6E2D566E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webVeterinaria", "webVeterinaria\webVeterinaria.csproj", "{DEFE50E8-55CF-469B-96A6-A7057F370581}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABA492CE-0059-4A62-820B-12D6E2D566E1} = {ABA492CE-0059-4A62-820B-12D6E2D566E1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

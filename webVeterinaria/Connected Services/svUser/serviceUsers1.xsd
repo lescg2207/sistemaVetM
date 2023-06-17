@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/wcfVeterinaria" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/wcfVeterinaria" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Users">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CELULAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONTRASEÑA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CORREO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADOUSUARIO" type="xs:int" />
+      <xs:element minOccurs="0" name="IDUSUARIO" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRECOMPLETO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPOUSU" type="xs:int" />
+      <xs:element minOccurs="0" name="USUARIO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Users" nillable="true" type="tns:Users" />
+  <xs:complexType name="ArrayOftipoUsu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tipoUsu" nillable="true" type="tns:tipoUsu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftipoUsu" nillable="true" type="tns:ArrayOftipoUsu" />
+  <xs:complexType name="tipoUsu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDTIPO" type="xs:int" />
+      <xs:element minOccurs="0" name="TIPOUSU" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tipoUsu" nillable="true" type="tns:tipoUsu" />
+  <xs:complexType name="ArrayOfestadoUsu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="estadoUsu" nillable="true" type="tns:estadoUsu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfestadoUsu" nillable="true" type="tns:ArrayOfestadoUsu" />
+  <xs:complexType name="estadoUsu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDESTADO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="estadoUsu" nillable="true" type="tns:estadoUsu" />
+</xs:schema>
