@@ -65,11 +65,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="estadoUsu.cs" />
     <Compile Include="IserviceUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="serviceUsers.svc.cs">
       <DependentUpon>serviceUsers.svc</DependentUpon>
     </Compile>
+    <Compile Include="tipoUsu.cs" />
     <Compile Include="Users.cs" />
   </ItemGroup>
   <ItemGroup>

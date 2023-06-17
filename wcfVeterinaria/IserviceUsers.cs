@@ -7,11 +7,28 @@ using System.Text;
 
 namespace wcfVeterinaria
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IserviceUsers" en el código y en el archivo de configuración a la vez.
+    
     [ServiceContract]
     public interface IserviceUsers
     {
         [OperationContract]
-        void DoWork();
+        string AgregarUsuario(Users usuario);
+
+        [OperationContract]
+        string EliminarUsario(int id);
+        [OperationContract]
+        string ActualizarUsuario(Users usuario, int id);
+
+        [OperationContract]
+        Users validarLogin(string usuario, string contra);
+
+        [OperationContract]
+        Users BuscarUsuario(string idusuario);
+
+        [OperationContract]
+        List<tipoUsu> listarTipo();
+
+        [OperationContract]
+        List<estadoUsu> listarEstado();
     }
 }
