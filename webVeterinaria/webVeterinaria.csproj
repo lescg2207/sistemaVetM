@@ -78,11 +78,13 @@
     </None>
     <Content Include="Inicio.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="menuDash.aspx" />
     <Content Include="Resources\css\acceso.css" />
     <Content Include="Resources\css\font.css" />
     <Content Include="Resources\css\menu.css" />
     <Content Include="Resources\images\fondoVet.png" />
     <Content Include="Resources\images\iconoVet.png" />
+    <Content Include="Resources\images\user.png" />
     <Content Include="usuarioRegistro.aspx" />
     <Content Include="Web.config" />
     <Content Include="Connected Services\svUser\webVeterinaria.svUser.estadoUsu.datasource">
@@ -128,6 +130,13 @@
     </Compile>
     <Compile Include="Menu.Master.designer.cs">
       <DependentUpon>Menu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="menuDash.aspx.cs">
+      <DependentUpon>menuDash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menuDash.aspx.designer.cs">
+      <DependentUpon>menuDash.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usuarioRegistro.aspx.cs">

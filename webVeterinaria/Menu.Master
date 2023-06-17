@@ -15,7 +15,7 @@
     <body>
         <div class="sidebar">
             <div class="logo-details">
-                <i><img src="images/iconoVet.png" /></i>
+                <i><img src="Resources/images/iconoVet.png" /></i>
                 <span class="logo_name">Mar de Colas</span>
 
             </div>
@@ -38,8 +38,8 @@
                 <i class='bx bxs-chevron-down arrow' ></i>
             </div>
             <ul class="sub-menu">
-                <li><a class="link_name" href="#">Usuarios</a></li>
-                <li><a href="#">Agregar</a></li>
+                <li><a class="link_name" href="usuarioRegistro.aspx">Usuarios</a></li>
+                <li><a href="usuarioRegistro.aspx">Agregar</a></li>
                 <li><a href="#">Modificar</a></li>
                 <li><a href="#">Eliminar</a></li>
             </ul>
@@ -105,7 +105,7 @@
 
                 <div class="profile-details">
                     <div class="profile-content">
-                        <img src="images/saaa.png" alt="profileImg"/>    
+                        <img src="Resources/images/user.png" alt=""/>    
                     </div>
                     <div class="name-job">
                     <div class="profile_name">Leslie</div>
