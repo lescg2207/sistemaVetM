@@ -1,0 +1,83 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: 'calibri';
+    background-image: url('../images/fondovet.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.st1 {
+    padding: 5%;
+}
+
+div.st2 {
+    width: 1070px;
+    height: 480px;
+    margin: 90px auto;
+    background: linear-gradient(rgb(41, 141, 144, 0.40), rgb(41, 141, 144, 0.40)); /*opacar el fondo*/
+}
+
+footer {
+    margin: -100px auto;
+}
+
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+    section h1 {
+        font-size: 44px;
+    }
+
+.conte {
+    text-align: center;
+}
+
+    .conte p {
+        font-size: 60px;
+        font-weight: bold;
+        margin: 1em 0;
+    }
+
+    .conte a {
+        color: white;
+        text-decoration: none;
+        background: #8BC34A;
+        padding: 4px 20px;
+        border-radius: 30px;
+        font-size: 30px;
+        margin: 10px;
+    }
+
+.buttons {
+    min-width: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+
+    .buttons a {
+        text-decoration: none;
+        font-size: 28px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background: #314652;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+        transition: all .4s ease-in-out;
+    }
+
+        .buttons a:hover {
+            transform: scale(1.2);
+        }

@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Acceso.master.cs" Inherits="webVeterinaria.Acceso" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Resources/css/acceso.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+    <body>
+        <header></header>
+    <div class="st1">
+        <div class="st2">
+             <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+      <footer>
+        <section class="buttons">
+          <a href="https://www.facebook.com/mardecolas/?locale=es_LA" class="bi bi-facebook"></a>
+          <a href="https://www.instagram.com/veterinaria.mardecolas/?hl=es" class="bi bi-instagram"></a>
+          <a href="https://twitter.com/mardecolas?lang=es" class="bi bi-twitter"></a>
+          <a href="https://twitter.com/mardecolas?lang=es" class="bi bi-tiktok" ></a>
+        </section>
+      </footer>    
+    </body>
+    
+</html>
