@@ -66,6 +66,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almacen.cs" />
     <Compile Include="estadoUsu.cs" />
     <Compile Include="IserviceAlmacen.cs" />
     <Compile Include="IserviceUsers.cs" />

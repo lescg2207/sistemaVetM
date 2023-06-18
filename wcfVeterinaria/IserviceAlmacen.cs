@@ -7,11 +7,18 @@ using System.Text;
 
 namespace wcfVeterinaria
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IserviceAlmacen" en el código y en el archivo de configuración a la vez.
+
     [ServiceContract]
     public interface IserviceAlmacen
     {
         [OperationContract]
-        void DoWork();
+        string AgregarAlmacen(Almacen almacen);
+        [OperationContract]
+        List<Almacen> ListarAlmacen();
+
+        [OperationContract]
+        string EliminarAlmacen(int id);
+        [OperationContract]
+        string ActualizarAlmacen(Almacen almacen, int id);
     }
 }
