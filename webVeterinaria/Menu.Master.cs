@@ -11,6 +11,15 @@ namespace webVeterinaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["userName"] != null)
+                {
+                    lblUser.Text = Session["userName"].ToString();
+                    lblTipoUsu.Text = Session["tipoUsu"].ToString();
+                }
+            }
+            
 
         }
     }

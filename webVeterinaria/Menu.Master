@@ -108,10 +108,14 @@
                         <img src="Resources/images/user.png" alt=""/>    
                     </div>
                     <div class="name-job">
-                    <div class="profile_name">Leslie</div>
-                    <div class="job">Vaganding</div>
+                    <div class="profile_name">
+                        <asp:Label ID="lblUser" runat="server" Text="Leslie" Style="font-size:14px"></asp:Label></div>
+                    <div class="job">
+                        <asp:Label ID="lblTipoUsu" runat="server" Text="Vaganding"></asp:Label></div>
                     </div>
-                    <i class='bx bx-log-out' ></i>
+                    <a href="Login.aspx">
+                        <i class='bx bx-log-out' ></i>
+                    </a>
                 </div>
             </li>
             </ul>

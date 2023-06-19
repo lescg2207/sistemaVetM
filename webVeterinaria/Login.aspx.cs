@@ -20,11 +20,23 @@ namespace webVeterinaria
         private void validarLogin()
         {
             string user=txtUser.Text;
-            string pass=txtPass.Text;
+            string pass=txtPass.Text;           
             usera =svUser.validarLogin(user,pass);
-            if(usera.ESTADOUSUARIO ==1)
+            int cargo = usera.TIPOUSU;
+            if(cargo == 1 )
             {
+                Session["tipoUsu"] = "Administrador";
+            }
+            else
+            {
+                Session["tipoUsu"] = "Operador";
+            }
+
+            if (usera.ESTADOUSUARIO ==1)
+            {
+                Session["userName"] = usera.NOMBRECOMPLETO.ToString();
                 Response.Redirect("menuDash.aspx");
+
             }
             else if(usera.ESTADOUSUARIO ==2)
             {
