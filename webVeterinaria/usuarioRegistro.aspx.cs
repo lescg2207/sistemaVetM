@@ -34,6 +34,16 @@ namespace webVeterinaria
 
             }
         }
+        private void Limpiar()
+        {
+            txtUser.Text = "";
+            txtPass.Text = "";
+            txtName.Text = "";
+            txtContact.Text = "";
+            txtEmail.Text = "";
+            cbxEstadoUsu.SelectedIndex = 0;
+            cbxTipoUsu.SelectedIndex = 0;
+        }
         private void RegUsers()
         {
             int estado = int.Parse(cbxEstadoUsu.SelectedValue);
@@ -48,6 +58,7 @@ namespace webVeterinaria
             regUser.CELULAR = txtContact.Text.Trim();
             string m = svUser.AgregarUsuario(regUser);
             Response.Write("<script language=javascript>alert('" + m + "');</script>");
+            Limpiar();
 
 
         }
