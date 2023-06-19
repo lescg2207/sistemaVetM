@@ -76,6 +76,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="agendaLista.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="libs\fullcalendar-6.1.8\dist\index.global.js" />
     <Content Include="libs\fullcalendar-6.1.8\dist\index.global.min.js" />
@@ -291,6 +292,13 @@
     </Compile>
     <Compile Include="Acceso.Master.designer.cs">
       <DependentUpon>Acceso.Master</DependentUpon>
+    </Compile>
+    <Compile Include="agendaLista.aspx.cs">
+      <DependentUpon>agendaLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agendaLista.aspx.designer.cs">
+      <DependentUpon>agendaLista.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\svUser\Reference.cs">
       <AutoGen>True</AutoGen>
