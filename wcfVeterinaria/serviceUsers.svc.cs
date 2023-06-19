@@ -186,10 +186,10 @@ namespace wcfVeterinaria
                 USUARIO.CONTRASEÑA = reader[3].ToString();
                 USUARIO.NOMBRECOMPLETO = reader[4].ToString();
                 USUARIO.CORREO = reader[5].ToString();
-                USUARIO.CELULAR = reader[6].ToString();
+                USUARIO.ESTADOUSUARIO = int.Parse(reader[6].ToString());
+                USUARIO.CELULAR = reader[7].ToString();
             }
-            {
-            }
+            
             return USUARIO;
         }
     }

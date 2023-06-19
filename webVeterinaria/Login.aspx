@@ -27,14 +27,14 @@
                             </div>                              
                             <div>
                                 <br />
-                                <asp:Label ID="lblMensaje" runat="server" Text="Mensaje" CssClass="mb-0 mt-3" Style="color:red; font-size:12px;"></asp:Label>
+                                <asp:Label ID="lblMensaje" runat="server" Text="Mensaje" CssClass="mb-0 mt-3" Style="color:red; font-size:12px; margin-left:40px;"></asp:Label>
                             </div>
                         </section>       
                     </div>
                     <div class="d-flex justify-content-center">
                         <section class="cold-md-5">
                             <div>
-                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" Style="margin-left: 20px; margin-top: -50px;" CssClass=" btn btn-dark" Height="40px" Width="250px" />                       
+                                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" Style="margin-left: 20px; margin-top: -50px;" CssClass=" btn btn-dark" Height="40px" Width="250px" OnClick="btnIngresar_Click" />                       
                             </div>                    
                         </section>
                     </div>
