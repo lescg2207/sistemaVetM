@@ -25,6 +25,10 @@ namespace wcfVeterinaria
         public string CELULAR;
         [DataMember]
         public int ESTADOUSUARIO;
+        [DataMember]
+        public string TIPO;
+        [DataMember]
+        public string ESTADO;
 
         public Users(int iDUSUARIO, int tIPOUSU, string uSUARIO, string cONTRASEÑA, string nOMBRECOMPLETO, string cORREO, string cELULAR, int eSTADOUSUARIO)
         {
@@ -49,6 +53,7 @@ namespace wcfVeterinaria
             ESTADOUSUARIO = eSTADOUSUARIO;
         }
 
+       
         public Users()
         {
         }

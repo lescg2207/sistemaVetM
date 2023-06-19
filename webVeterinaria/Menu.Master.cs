@@ -18,9 +18,21 @@ namespace webVeterinaria
                     lblUser.Text = Session["userName"].ToString();
                     lblTipoUsu.Text = Session["tipoUsu"].ToString();
                 }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                    
+                }
             }
             
 
+        }
+
+        protected void lblSalir_Click(object sender, EventArgs e)
+        {
+           
+            Session.RemoveAll();          
+            Response.Redirect("Login.aspx");
         }
     }
 }

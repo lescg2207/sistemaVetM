@@ -5,9 +5,11 @@
       <xs:element minOccurs="0" name="CELULAR" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CONTRASEÑA" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CORREO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESTADO" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ESTADOUSUARIO" type="xs:int" />
       <xs:element minOccurs="0" name="IDUSUARIO" type="xs:int" />
       <xs:element minOccurs="0" name="NOMBRECOMPLETO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIPO" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TIPOUSU" type="xs:int" />
       <xs:element minOccurs="0" name="USUARIO" nillable="true" type="xs:string" />
     </xs:sequence>

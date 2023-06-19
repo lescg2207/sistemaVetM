@@ -22,28 +22,35 @@ namespace webVeterinaria
             string user=txtUser.Text;
             string pass=txtPass.Text;           
             usera =svUser.validarLogin(user,pass);
-            int cargo = usera.TIPOUSU;
-            if(cargo == 1 )
-            {
-                Session["tipoUsu"] = "Administrador";
-            }
-            else
-            {
-                Session["tipoUsu"] = "Operador";
-            }
+            
 
-            if (usera.ESTADOUSUARIO ==1)
+            if (usera.ESTADO =="Activo")
             {
                 Session["userName"] = usera.NOMBRECOMPLETO.ToString();
+                Session["tipoUsu"] = usera.TIPO.ToString();
                 Response.Redirect("menuDash.aspx");
 
             }
-            else if(usera.ESTADOUSUARIO ==2)
+            else if(usera.ESTADO =="Inactivo")
             {
+                lblMensaje.Visible = true;
                 lblMensaje.Text = "Usuario inactivo, comuniquese con "+"</br>"+"su administrador";
+
+            }else if (user=="" )
+            {
+                lblMensaje.Visible = true;
+                lblMensaje.Text = "Falta ingresar usuario";
+                txtUser.Focus();
+
+            }else if ( pass == "")
+            {
+                lblMensaje.Visible = true;
+                lblMensaje.Text = "Falta ingresar contraseña";
+                txtPass.Focus();
             }
             else
             {
+                lblMensaje.Visible = true;
                 lblMensaje.Text = "Usuario o contraseña incorrectos";
             }
 

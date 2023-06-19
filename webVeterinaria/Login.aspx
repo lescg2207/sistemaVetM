@@ -27,7 +27,7 @@
                             </div>                              
                             <div>
                                 <br />
-                                <asp:Label ID="lblMensaje" runat="server" Text="Mensaje" CssClass="mb-0 mt-3" Style="color:red; font-size:12px; margin-left:40px;"></asp:Label>
+                                <asp:Label ID="lblMensaje" Visible="false" runat="server" Text="Mensaje" CssClass="mb-0 mt-3" Style="color:red; font-size:12px; margin-left:40px;"></asp:Label>
                             </div>
                         </section>       
                     </div>
@@ -42,5 +42,15 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        function noBack() { window.history.forward(1) }
+        setTimeout("noBack()", 0);
+        noBack();
+        window.onload = noBack;
+        window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+        window.onunload = function () { void (0) }
+        if (history.forward(1)) {
+            location.replace(history.forward(1))
+        }
+    </script>
 </asp:Content>

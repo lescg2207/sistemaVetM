@@ -13,6 +13,7 @@
     </asp:ContentPlaceHolder>
 </head>
     <body>
+        <form id="form1" runat="server">
         <div class="sidebar">
             <div class="logo-details">
                 <i><img src="Resources/images/iconoVet.png" /></i>
@@ -21,7 +22,7 @@
             </div>
             <ul class="nav-links">
             <li>
-            <a href="#">
+            <a href="menuDash.aspx">
                 <i class='bx bx-grid-alt' ></i>
                 <span class="link_name">Menú</span>
             </a>
@@ -113,9 +114,7 @@
                     <div class="job">
                         <asp:Label ID="lblTipoUsu" runat="server" Text="Vaganding"></asp:Label></div>
                     </div>
-                    <a href="Login.aspx">
-                        <i class='bx bx-log-out' ></i>
-                    </a>
+                    <asp:LinkButton ID="lblSalir" runat="server" OnClick="lblSalir_Click"><i class='bx bx-log-out' ></i></asp:LinkButton>
                 </div>
             </li>
             </ul>
@@ -124,16 +123,30 @@
         <div class="home-content">
             <i class='bx bx-menu' ></i>
         </div>
-            <form id="form1" runat="server">
+            
+                <div>
+                    
+                </div>
                 <div class="contenedor">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-            </form>
-        </section>        
+            
+        </section>      
+        </form>
     </body>
     <script>
-
+        function noBack() { window.history.forward(1) }
+        setTimeout("noBack()", 0);
+        noBack();
+        window.onload = noBack;
+        window.onpageshow = function (evt) { if (evt.persisted) noBack() }
+        window.onunload = function () { void (0) }
+        if (history.forward(1)) {
+            location.replace(history.forward(1))
+        }
+    </script>
+    <script>
         let arrow = document.querySelectorAll(".arrow");
         for (var i = 0; i < arrow.length; i++) {
         arrow[i].addEventListener("click", (e)=>{

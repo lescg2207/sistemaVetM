@@ -32,6 +32,9 @@ namespace webVeterinaria.svUser {
         private string CORREOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ESTADOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int ESTADOUSUARIOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -39,6 +42,9 @@ namespace webVeterinaria.svUser {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NOMBRECOMPLETOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TIPOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TIPOUSUField;
@@ -96,6 +102,19 @@ namespace webVeterinaria.svUser {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ESTADO {
+            get {
+                return this.ESTADOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ESTADOField, value) != true)) {
+                    this.ESTADOField = value;
+                    this.RaisePropertyChanged("ESTADO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int ESTADOUSUARIO {
             get {
                 return this.ESTADOUSUARIOField;
@@ -130,6 +149,19 @@ namespace webVeterinaria.svUser {
                 if ((object.ReferenceEquals(this.NOMBRECOMPLETOField, value) != true)) {
                     this.NOMBRECOMPLETOField = value;
                     this.RaisePropertyChanged("NOMBRECOMPLETO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TIPO {
+            get {
+                return this.TIPOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TIPOField, value) != true)) {
+                    this.TIPOField = value;
+                    this.RaisePropertyChanged("TIPO");
                 }
             }
         }

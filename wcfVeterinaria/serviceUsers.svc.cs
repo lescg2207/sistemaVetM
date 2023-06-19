@@ -173,7 +173,7 @@ namespace wcfVeterinaria
         {
             Users USUARIO = new Users();
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Usuarios Where usuario = @user and contraseña = @pass", con);
+            SqlCommand cmd = new SqlCommand("SELECT USUARIOS.IDUSUARIO,TIPOUSU.tipo, USUARIOS.Usuario, USUARIOS.CONTRASEÑA, USUARIOS.NOMBRECOMPLETO,USUARIOS.CORREO,estaUsu.Estado,USUARIOS.CELULAR FROM USUARIOS INNER JOIN tipoUsu ON USUARIOS.TIPOUSU = tipoUsu.idTipo inner join estaUsu on USUARIOS.ESTADOUSUARIO=estaUsu.idEstado Where usuario = @user and contraseña = @pass", con);
             cmd.Parameters.AddWithValue("@user", usuario);
             cmd.Parameters.AddWithValue("@pass", contra);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -181,12 +181,12 @@ namespace wcfVeterinaria
             while (reader.Read())
             {
                 USUARIO.IDUSUARIO = int.Parse(reader[0].ToString());
-                USUARIO.TIPOUSU = int.Parse(reader[1].ToString());
+                USUARIO.TIPO = reader[1].ToString();
                 USUARIO.USUARIO = reader[2].ToString();
                 USUARIO.CONTRASEÑA = reader[3].ToString();
                 USUARIO.NOMBRECOMPLETO = reader[4].ToString();
                 USUARIO.CORREO = reader[5].ToString();
-                USUARIO.ESTADOUSUARIO = int.Parse(reader[6].ToString());
+                USUARIO.ESTADO = reader[6].ToString();
                 USUARIO.CELULAR = reader[7].ToString();
             }
             

@@ -87,15 +87,6 @@
     <Content Include="Resources\images\user.png" />
     <Content Include="usuarioRegistro.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Connected Services\svUser\webVeterinaria.svUser.estadoUsu.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\svUser\webVeterinaria.svUser.tipoUsu.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\svUser\webVeterinaria.svUser.Users.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso.Master.cs">
@@ -160,6 +151,15 @@
     <None Include="Connected Services\svUser\serviceUsers2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Connected Services\svUser\webVeterinaria.svUser.estadoUsu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\svUser\webVeterinaria.svUser.tipoUsu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\svUser\webVeterinaria.svUser.Users.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Resources\css\Ultima Bold.ttf" />
     <None Include="Web.Debug.config">
