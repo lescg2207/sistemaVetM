@@ -11,7 +11,7 @@ namespace webVeterinaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*if (!IsPostBack)
+            if (!IsPostBack)
             {
                 if (Session["userName"] != null)
                 {
@@ -20,19 +20,19 @@ namespace webVeterinaria
                 }
                 else
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("Inicio.aspx");
                     
                 }
-            }*/
+            }
             
 
         }
 
         protected void lblSalir_Click(object sender, EventArgs e)
         {
-           /*
+           
             Session.RemoveAll();          
-            Response.Redirect("Login.aspx");*/
+            Response.Redirect("Inicio.aspx");
         }
     }
 }

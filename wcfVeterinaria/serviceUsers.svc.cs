@@ -176,7 +176,6 @@ namespace wcfVeterinaria
             SqlCommand cmd = new SqlCommand("SELECT USUARIOS.IDUSUARIO,TIPOUSU.tipo, USUARIOS.Usuario, USUARIOS.CONTRASEÑA, USUARIOS.NOMBRECOMPLETO,USUARIOS.CORREO,estaUsu.Estado,USUARIOS.CELULAR FROM USUARIOS INNER JOIN tipoUsu ON USUARIOS.TIPOUSU = tipoUsu.idTipo inner join estaUsu on USUARIOS.ESTADOUSUARIO=estaUsu.idEstado Where usuario = @user and contraseña = @pass", con);
             cmd.Parameters.AddWithValue("@user", usuario);
             cmd.Parameters.AddWithValue("@pass", contra);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {

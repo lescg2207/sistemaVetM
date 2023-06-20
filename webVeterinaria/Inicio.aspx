@@ -6,7 +6,12 @@
         <h1>Proyecto Veterinaria</h1>
               <div class="conte">
                 <p>Bienvenido a nuestro Menu de Ingreso</p>
-                <a href="Login.aspx">Ingresar</a>
+                  <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+                    <a class="btn btn-dark m-3" href="Login.aspx">Ingresar
+                        </a>
+                      </div>
+   
+                
               </div>          
     </section>
 </asp:Content>
