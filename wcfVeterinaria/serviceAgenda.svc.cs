@@ -25,7 +25,7 @@ namespace wcfVeterinaria
                           id = p.IDCITA,
                           title = p.DESCRIPCION,
                           start = p.FECHA.ToString(),
-                          end = "2023-06-20",
+                          end = "2023/06/20",
 
                       };
             return qry.ToList();
