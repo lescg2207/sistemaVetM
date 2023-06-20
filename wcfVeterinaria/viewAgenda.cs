@@ -15,7 +15,8 @@ namespace wcfVeterinaria
         public string title { get; set; }
         [DataMember]
         public string start { get; set; }
-        
+        [DataMember]
+        public string end { get; set; }
 
     }
 }

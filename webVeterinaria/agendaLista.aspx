@@ -24,37 +24,27 @@
     </div>
     <script>
 
-        $(function () {
-            GetAgenda();
-        });
+        
 
-        function GetAgenda() {
-            var events = [];
-            events.push({
+          
 
-                'id': 1,
-                'title': 'Agenda',
-                'start': '2023-06-19 01:00:00',
-                'end': '2023-06-19 12:30:00',
-                'allDay': false,
-                'color': '#FFFF00',
-                'textcolor':'#00000'
+                var events = '/serviceAgenda.svc/ListadoAgenda';
 
-            })
 
-        var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialDate: '2023-01-12',
-                editable: true,
-                selectable: true,
-                businessHours: true,
-                dayMaxEvents: true, // a
-                events: events
-                
-            });
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    editable: true,
+                    selectable: true,
+                    businessHours: true,
+                    dayMaxEvents: true,
+                    events: events
 
-            calendar.render();
-        }
+                });
+
+                calendar.render();
+       
+
+            
         
     </script>
 </asp:Content>

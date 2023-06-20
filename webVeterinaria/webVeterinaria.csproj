@@ -82,7 +82,9 @@
     <Content Include="libs\fullcalendar-6.1.8\dist\index.global.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="menuDash.aspx" />
+    <Content Include="pruebaMenu.aspx" />
     <Content Include="Resources\css\acceso.css" />
+    <Content Include="Resources\css\bootstrap.min.css" />
     <Content Include="Resources\css\font.css" />
     <Content Include="Resources\css\menu.css" />
     <Content Include="Resources\images\fondoVet.png" />
@@ -125,6 +127,20 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="masterAcceso.Master.cs">
+      <DependentUpon>masterAcceso.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterAcceso.Master.designer.cs">
+      <DependentUpon>masterAcceso.Master</DependentUpon>
+    </Compile>
+    <Compile Include="masterMenu.Master.cs">
+      <DependentUpon>masterMenu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="masterMenu.Master.designer.cs">
+      <DependentUpon>masterMenu.Master</DependentUpon>
+    </Compile>
     <Compile Include="Menu.Master.cs">
       <DependentUpon>Menu.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -140,6 +156,13 @@
       <DependentUpon>menuDash.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pruebaMenu.aspx.cs">
+      <DependentUpon>pruebaMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pruebaMenu.aspx.designer.cs">
+      <DependentUpon>pruebaMenu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="usuarioRegistro.aspx.cs">
       <DependentUpon>usuarioRegistro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,6 +193,8 @@
     <Content Include="Connected Services\svUser\webVeterinaria.svUser.Users.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="masterMenu.Master" />
+    <Content Include="masterAcceso.Master" />
     <None Include="packages.config" />
     <Content Include="Resources\css\Ultima Bold.ttf" />
     <None Include="Web.Debug.config">
