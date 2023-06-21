@@ -55,15 +55,36 @@ namespace webVeterinaria
         {
                    
             ouser = svUser.BuscarUsuario(id);
-            if (ouser != null)
+            try{
+                if (ouser != null)
+                {
+                    txtUser.Text = ouser.USUARIO;
+                    txtPass.Text = ouser.CONTRASEÑA;
+                    txtEmail.Text = ouser.CORREO;
+                    txtContact.Text = ouser.CELULAR;
+                    txtName.Text = ouser.NOMBRECOMPLETO;
+                    cbxEstadoUsu.SelectedValue = ouser.ESTADOUSUARIO.ToString();
+                    cbxTipoUsu.SelectedValue = ouser.TIPOUSU.ToString();
+                }
+                else
+                {
+  
+                    
+                    txtUser.Text = "";
+                    txtPass.Text = "";
+                    txtEmail.Text = "";
+                    txtContact.Text = "";
+                    txtName.Text = "";
+                    cbxEstadoUsu.Text = "";
+                    cbxTipoUsu.Text = "";
+                    txtId.Focus();
+
+                }
+
+            }
+            catch
             {
-                txtUser.Text = ouser.USUARIO;
-                txtPass.Text = ouser.CONTRASEÑA;
-                txtEmail.Text = ouser.CORREO;
-                txtContact.Text = ouser.CELULAR;
-                txtName.Text = ouser.NOMBRECOMPLETO;
-                cbxEstadoUsu.SelectedValue = ouser.ESTADOUSUARIO.ToString();
-                cbxTipoUsu.SelectedValue = ouser.TIPOUSU.ToString();
+                Response.Write("<script>Swal.fire(  'Good job!',  'You clicked the button!', 'success');</script>");
             }
            
         }

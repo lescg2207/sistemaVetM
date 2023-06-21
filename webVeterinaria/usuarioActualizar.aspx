@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <style>
        div .conte{
            font-family: UltimaAlt;
@@ -22,7 +23,7 @@
                   
                     <div class="mensaje">
                         <asp:Label ID="lblmensaje" runat="server" Text="Mensaje" Visible="false" CssClass="auto-style1" font-weight="500"></asp:Label>
-                      </button>
+            
                     </div>
                 </div>
                 <div class="d-flex justify-content-center">
