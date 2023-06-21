@@ -23,7 +23,7 @@ namespace wcfVeterinaria
         Users validarLogin(string usuario, string contra);
 
         [OperationContract]
-        Users BuscarUsuario(string idusuario);
+        Users BuscarUsuario(int idusuario);
 
         [OperationContract]
         List<tipoUsu> listarTipo();

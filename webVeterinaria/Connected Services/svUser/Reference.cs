@@ -353,10 +353,10 @@ namespace webVeterinaria.svUser {
         System.Threading.Tasks.Task<webVeterinaria.svUser.Users> validarLoginAsync(string usuario, string contra);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IserviceUsers/BuscarUsuario", ReplyAction="http://tempuri.org/IserviceUsers/BuscarUsuarioResponse")]
-        webVeterinaria.svUser.Users BuscarUsuario(string idusuario);
+        webVeterinaria.svUser.Users BuscarUsuario(int idusuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IserviceUsers/BuscarUsuario", ReplyAction="http://tempuri.org/IserviceUsers/BuscarUsuarioResponse")]
-        System.Threading.Tasks.Task<webVeterinaria.svUser.Users> BuscarUsuarioAsync(string idusuario);
+        System.Threading.Tasks.Task<webVeterinaria.svUser.Users> BuscarUsuarioAsync(int idusuario);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IserviceUsers/listarTipo", ReplyAction="http://tempuri.org/IserviceUsers/listarTipoResponse")]
         webVeterinaria.svUser.tipoUsu[] listarTipo();
@@ -430,11 +430,11 @@ namespace webVeterinaria.svUser {
             return base.Channel.validarLoginAsync(usuario, contra);
         }
         
-        public webVeterinaria.svUser.Users BuscarUsuario(string idusuario) {
+        public webVeterinaria.svUser.Users BuscarUsuario(int idusuario) {
             return base.Channel.BuscarUsuario(idusuario);
         }
         
-        public System.Threading.Tasks.Task<webVeterinaria.svUser.Users> BuscarUsuarioAsync(string idusuario) {
+        public System.Threading.Tasks.Task<webVeterinaria.svUser.Users> BuscarUsuarioAsync(int idusuario) {
             return base.Channel.BuscarUsuarioAsync(idusuario);
         }
         

@@ -63,7 +63,7 @@ namespace wcfVeterinaria
             return MENSAJE;
         }
 
-        public Users BuscarUsuario(string idusuario)
+        public Users BuscarUsuario(int idusuario)
         {
             Users USUARIO = new Users();
             con.Open();

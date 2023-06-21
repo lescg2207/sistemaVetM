@@ -43,7 +43,7 @@
             <ul class="sub-menu">
                 <li><a class="link_name" href="usuarioRegistro.aspx">Usuarios</a></li>
                 <li><a href="usuarioRegistro.aspx">Agregar</a></li>
-                <li><a href="#">Modificar</a></li>
+                <li><a href="usuarioActualizar.aspx">Modificar</a></li>
                 <li><a href="#">Eliminar</a></li>
             </ul>
             </li>
