@@ -36,7 +36,7 @@ namespace webVeterinaria
                 lblMensaje.Visible = true;
                 lblMensaje.Text = "Usuario inactivo, comuniquese con "+"</br>"+"su administrador";
 
-            }else if (user=="" )
+            }else if (user == "" )
             {
                 lblMensaje.Visible = true;
                 lblMensaje.Text = "Falta ingresar usuario";

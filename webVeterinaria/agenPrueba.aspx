@@ -114,10 +114,10 @@
 
                           for (var i = 0; i < data.d.length; i++) {
                               eventos.push({
-                                  id: data.d[i].IdEvento,
-                                  title: data.d[i].Titulo,
-                                  start: data.d[i].FechaInicio,
-                                  end: data.d[i].FechaFin
+                                  id: data.d[i].id,
+                                  title: data.d[i].title,
+                                  start: data.d[i].start,
+                                  end: data.d[i].end
                               });
                           }
                           callback(eventos);
