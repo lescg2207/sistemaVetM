@@ -84,7 +84,7 @@ namespace webVeterinaria
             }
             catch
             {
-                Response.Write("<script>Swal.fire(  'Good job!',  'You clicked the button!', 'success');</script>");
+                Response.Write("<script>alert('USUARIO NO ENCONTRADO');</script>");
             }
            
         }
