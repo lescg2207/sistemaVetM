@@ -76,6 +76,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="frmAgendaLista.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="libs\fullcalendar-6.1.8\dist\index.global.js" />
     <Content Include="libs\fullcalendar-6.1.8\dist\index.global.min.js" />
@@ -104,6 +105,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgendaLista.aspx.cs">
+      <DependentUpon>frmAgendaLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAgendaLista.aspx.designer.cs">
+      <DependentUpon>frmAgendaLista.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
