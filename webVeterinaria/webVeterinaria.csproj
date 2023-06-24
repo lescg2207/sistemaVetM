@@ -69,8 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="agendaLista.aspx" />
-    <Content Include="agenPrueba.aspx" />
     <None Include="Connected Services\svUser\serviceUsers.disco" />
     <None Include="Connected Services\svUser\configuration91.svcinfo" />
     <None Include="Connected Services\svUser\configuration.svcinfo" />
@@ -101,20 +99,6 @@
     </Compile>
     <Compile Include="Acceso.Master.designer.cs">
       <DependentUpon>Acceso.Master</DependentUpon>
-    </Compile>
-    <Compile Include="agendaLista.aspx.cs">
-      <DependentUpon>agendaLista.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="agendaLista.aspx.designer.cs">
-      <DependentUpon>agendaLista.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="agenPrueba.aspx.cs">
-      <DependentUpon>agenPrueba.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="agenPrueba.aspx.designer.cs">
-      <DependentUpon>agenPrueba.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\svUser\Reference.cs">
       <AutoGen>True</AutoGen>
