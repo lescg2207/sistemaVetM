@@ -11,11 +11,12 @@ namespace wcfVeterinaria
   
     public class serviceAgenda : IserviceAgenda
     {
+        SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=vet;User ID=sa;Password=les123");
         public List<Evento> ObtenerEventos()
         {
             List<Evento> eventos = new List<Evento>();
 
-            using (SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=vet;User ID=sa;Password=les123"))
+            using (connection)
             {
                 string query = "SELECT MOTIVO.DESCRIPCION, Agenda.FechaInicio, Agenda.FechaFin, Agenda.Color FROM  Agenda INNER JOIN MOTIVO ON Agenda.IDMOTIVO = MOTIVO.IDMOTIVO";
 

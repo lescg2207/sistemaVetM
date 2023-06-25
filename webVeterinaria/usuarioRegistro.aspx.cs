@@ -46,6 +46,15 @@ namespace webVeterinaria
         }
         private void RegUsers()
         {
+            string script;
+            if (string.IsNullOrWhiteSpace(txtUser.Text) || string.IsNullOrWhiteSpace(txtPass.Text) ||
+                string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtContact.Text))
+            {
+                script = "Swal.fire('ERROR!!','Debes completar todos los campos','error');";
+                ScriptManager.RegisterStartupScript(this, GetType(), "SweetAlert", script, true);
+                return;
+            }
             int estado = int.Parse(cbxEstadoUsu.SelectedValue);
             int tipo = int.Parse(cbxTipoUsu.SelectedValue);
             Users regUser = new Users();
@@ -57,9 +66,10 @@ namespace webVeterinaria
             regUser.ESTADOUSUARIO = estado;
             regUser.CELULAR = txtContact.Text.Trim();
             string m = svUser.AgregarUsuario(regUser);
-            Response.Write("<script language=javascript>alert('" + m + "');</script>");
+            script = $"Swal.fire('EXITO!!','"+m+"','success');";
+            ScriptManager.RegisterStartupScript(this, GetType(), "SweetAlert", script, true);
+            
             Limpiar();
-
 
         }
 

@@ -53,7 +53,7 @@ namespace wcfVeterinaria
             int result = cmd.ExecuteNonQuery();
             if (result == 1)
             {
-                MENSAJE = usuario.NOMBRECOMPLETO + " INSERTADO CON EXITO";
+                MENSAJE = usuario.NOMBRECOMPLETO + " REGISTRADO CORRECTAMENTE";
             }
             else
             {

@@ -28,7 +28,7 @@ namespace webVeterinaria
                 cbxEstadoUsu.DataBind();
             }
         }
-
+        #region BUTTONS
         private void desactivarInputs()
         {
             txtUser.Enabled = false;
@@ -51,9 +51,11 @@ namespace webVeterinaria
             cbxTipoUsu.Enabled = true;
 
         }
+        #endregion
+
+        #region buscarIdUsuario
         private void buscarUser(int id)
-        {
-                   
+        {                  
             ouser = svUser.BuscarUsuario(id);
             try{
                 if (ouser != null)
@@ -67,9 +69,7 @@ namespace webVeterinaria
                     cbxTipoUsu.SelectedValue = ouser.TIPOUSU.ToString();
                 }
                 else
-                {
-  
-                    
+                {                   
                     txtUser.Text = "";
                     txtPass.Text = "";
                     txtEmail.Text = "";
@@ -84,10 +84,13 @@ namespace webVeterinaria
             }
             catch
             {
-                Response.Write("<script>alert('USUARIO NO ENCONTRADO');</script>");
+                string script = "Swal.fire('ERROR!!','USUARIO NO ENCONTRADO','error');";
+                ScriptManager.RegisterStartupScript(this, GetType(), "SweetAlert", script, true);
+                
             }
            
         }
+        #endregion
 
         protected void btn_buscar_Click(object sender, EventArgs e)
         {

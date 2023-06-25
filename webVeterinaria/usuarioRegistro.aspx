@@ -10,6 +10,7 @@
            background:white;
        }
     </style>
+    
     <div class="conte">
         <div class="container d-flex justify-content-center mt-5">
         <div class="cold-md-12 border shadow" style="width: 800px;">
