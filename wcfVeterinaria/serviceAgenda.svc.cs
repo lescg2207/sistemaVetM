@@ -18,7 +18,7 @@ namespace wcfVeterinaria
 
             using (connection)
             {
-                string query = "SELECT MOTIVO.DESCRIPCION, Agenda.FechaInicio, Agenda.FechaFin, Agenda.Color FROM  Agenda INNER JOIN MOTIVO ON Agenda.IDMOTIVO = MOTIVO.IDMOTIVO";
+                string query = "SELECT MOTIVO.DESCRIPCION, Agenda.FechaInicio, Agenda.FechaFin, Agenda.Color,Agenda.NOMBRECLIENTE,Agenda.DESCRIPCION FROM  Agenda INNER JOIN MOTIVO ON Agenda.IDMOTIVO = MOTIVO.IDMOTIVO";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -33,7 +33,9 @@ namespace wcfVeterinaria
                                 Titulo = reader.GetString(0),
                                 FechaInicio = reader.GetDateTime(1),
                                 FechaFin = reader.GetDateTime(2),
-                                Color = reader.GetString(3)
+                                Color = reader.GetString(3),
+                                Cliente = reader.GetString(4),
+                                Observacion = reader.GetString(5),
                             };
 
                             eventos.Add(evento);

@@ -10,7 +10,7 @@ using System.Web.Script.Services;
 
 namespace wcfVeterinaria
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IserviceAgenda" en el código y en el archivo de configuración a la vez.
+   
     [ServiceContract]
     public interface IserviceAgenda
     {

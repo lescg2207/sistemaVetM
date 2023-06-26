@@ -62,17 +62,17 @@
                         </div>
                         <div >
                             <p class="mb-0 mt-3">Tipo</p>
-                            <asp:DropDownList ID="cbxTipoUsu" Style="width:220px;" CssClass="btn btn-white btn-sm dropdown-toggle" runat="server" ></asp:DropDownList>
+                            <asp:DropDownList ID="cbxTipoUsu" Style="width:300px;" CssClass="btn btn-white btn-sm dropdown-toggle" runat="server" ></asp:DropDownList>
                         </div>
                         <div style="margin-top:50px">
                             <p class="mb-0 mt-3">Estado</p>
-                            <asp:DropDownList ID="cbxEstadoUsu" Style="width:220px;" CssClass="btn btn-white btn-sm dropdown-toggle" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="cbxEstadoUsu" Style="width:300px;" CssClass="btn btn-white btn-sm dropdown-toggle" runat="server"></asp:DropDownList>
                         </div>
                         <br />
                         <br />
                         <br />
                         <div>
-                            <asp:Button ID="Button1" runat="server" Text="Guardar" Style=" margin-top: 40px;" CssClass=" btn btn-dark" OnClientClick="return ValidarCampo();" Height="40px" Width="270px"  />
+                            <asp:Button ID="btnGuardar" runat="server" Text="Guardar Cambios" Style="margin-top: 40px;" CssClass=" btn btn-dark" OnClientClick="return ValidarCampo();" Height="40px" Width="300px" OnClick="btnGuardar_Click" />
                            
                         </div>
                         

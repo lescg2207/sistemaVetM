@@ -16,14 +16,15 @@ namespace wcfVeterinaria
         public string ActualizarUsuario(Users usuario, int id)
         {
             string MENSAJE;
-            SqlCommand cmd = new SqlCommand("update USUARIOS set TIPOUSU=@1,USUARIO=@2,CONTRASEÑA=@3,NOMBRECOMPLETO=@4,CORREO=@5,CELULAR=@6 where idusuario=@7", con);
+            SqlCommand cmd = new SqlCommand("update USUARIOS set TIPOUSU=@1,USUARIO=@2,CONTRASEÑA=@3,NOMBRECOMPLETO=@4,CORREO=@5,ESTADOUSUARIO=@6,CELULAR=@7 where idusuario=@8", con);
             cmd.Parameters.AddWithValue("@1", usuario.TIPOUSU);
             cmd.Parameters.AddWithValue("@2", usuario.USUARIO);
             cmd.Parameters.AddWithValue("@3", usuario.CONTRASEÑA);
             cmd.Parameters.AddWithValue("@4", usuario.NOMBRECOMPLETO);
             cmd.Parameters.AddWithValue("@5", usuario.CORREO);
-            cmd.Parameters.AddWithValue("@6", usuario.CELULAR);
-            cmd.Parameters.AddWithValue("@7", id);
+            cmd.Parameters.AddWithValue("@6", usuario.ESTADOUSUARIO);
+            cmd.Parameters.AddWithValue("@7", usuario.CELULAR);
+            cmd.Parameters.AddWithValue("@8", id);
             con.Open();
             int result = cmd.ExecuteNonQuery();
             if (result == 1)

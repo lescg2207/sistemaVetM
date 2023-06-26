@@ -20,5 +20,9 @@ namespace wcfVeterinaria
 
         [DataMember]
         public string Color { get; set; }
+        [DataMember]
+        public string Cliente { get; set; }
+        [DataMember]
+        public string Observacion { get; set;}
     }
 }

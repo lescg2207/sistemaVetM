@@ -38,6 +38,7 @@ namespace webVeterinaria
             txtName.Enabled = false;        
             cbxEstadoUsu.Enabled = false;
             cbxTipoUsu.Enabled = false;
+            btnGuardar.Enabled = false;
            
         }
         private void activarInputs()
@@ -49,6 +50,7 @@ namespace webVeterinaria
             txtName.Enabled = true;
             cbxEstadoUsu.Enabled = true;
             cbxTipoUsu.Enabled = true;
+            btnGuardar.Enabled = true;
 
         }
         #endregion
@@ -67,6 +69,8 @@ namespace webVeterinaria
                     txtName.Text = ouser.NOMBRECOMPLETO;
                     cbxEstadoUsu.SelectedValue = ouser.ESTADOUSUARIO.ToString();
                     cbxTipoUsu.SelectedValue = ouser.TIPOUSU.ToString();
+                    string script = "Swal.fire('EXITO!!','USUARIO ENCONTRADO','success');";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "SweetAlert", script, true);
                 }
                 else
                 {                   
@@ -96,6 +100,30 @@ namespace webVeterinaria
         {
             buscarUser(int.Parse(txtId.Text));
             activarInputs();
+        }
+
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtId.Text);
+            int estado = Convert.ToInt32(cbxEstadoUsu.SelectedValue);
+            int tipo = Convert.ToInt32(cbxTipoUsu.SelectedValue);
+            ouser.USUARIO=txtUser.Text;
+            ouser.CORREO=txtEmail.Text;
+            ouser.CONTRASEÑA=txtPass.Text;
+            ouser.CELULAR=txtContact.Text;
+            ouser.ESTADOUSUARIO = estado;
+            ouser.TIPOUSU=tipo;
+            ouser.NOMBRECOMPLETO=txtName.Text;
+            string m=svUser.ActualizarUsuario(ouser,id);
+
+         
+            string script = "Swal.fire('EXITO!!','" + m + "','success');";
+            ScriptManager.RegisterStartupScript(this, GetType(), "SweetAlert", script, true);
+            buscarUser(id);
+            
+
+
+            
         }
     }
 }
