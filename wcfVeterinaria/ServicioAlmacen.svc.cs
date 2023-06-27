@@ -13,7 +13,7 @@ namespace wcfVeterinaria
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ServicioAlmacen.svc o ServicioAlmacen.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ServicioAlmacen : IServicioAlmacen
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-67GERHD\\SQLEXPRESS;Database=vet ;integrated Security=true;");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-8RD4SAJ\\SQLEXPRESS;Database=vet ;integrated Security=true;");
 
         public string ActualizarAlmacen(clsAlmacen almacen)
         {

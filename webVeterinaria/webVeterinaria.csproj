@@ -76,6 +76,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="BuscarAlmacen.aspx" />
+    <Content Include="CrudAlmacen.aspx" />
     <Content Include="frmAgendaLista.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="libs\fullcalendar-6.1.8\dist\index.global.js" />
@@ -86,6 +88,7 @@
     <Content Include="Resources\css\bootstrap.min.css" />
     <Content Include="Resources\css\font.css" />
     <Content Include="Resources\css\menu.css" />
+    <Content Include="Resources\css\estilo2.css" />
     <Content Include="Resources\images\fondoVet.png" />
     <Content Include="Resources\images\iconoVet.png" />
     <Content Include="Resources\images\user.png" />
@@ -101,10 +104,24 @@
     <Compile Include="Acceso.Master.designer.cs">
       <DependentUpon>Acceso.Master</DependentUpon>
     </Compile>
+    <Compile Include="BuscarAlmacen.aspx.cs">
+      <DependentUpon>BuscarAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuscarAlmacen.aspx.designer.cs">
+      <DependentUpon>BuscarAlmacen.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\svUser\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="CrudAlmacen.aspx.cs">
+      <DependentUpon>CrudAlmacen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrudAlmacen.aspx.designer.cs">
+      <DependentUpon>CrudAlmacen.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmAgendaLista.aspx.cs">
       <DependentUpon>frmAgendaLista.aspx</DependentUpon>
