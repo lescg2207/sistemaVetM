@@ -49,6 +49,12 @@
   <wsdl:message name="IserviceUsers_listarEstado_OutputMessage">
     <wsdl:part name="parameters" element="tns:listarEstadoResponse" />
   </wsdl:message>
+  <wsdl:message name="IserviceUsers_listarMotivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:listarMotivo" />
+  </wsdl:message>
+  <wsdl:message name="IserviceUsers_listarMotivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listarMotivoResponse" />
+  </wsdl:message>
   <wsdl:portType name="IserviceUsers">
     <wsdl:operation name="AgregarUsuario">
       <wsdl:input wsaw:Action="http://tempuri.org/IserviceUsers/AgregarUsuario" message="tns:IserviceUsers_AgregarUsuario_InputMessage" />
@@ -77,6 +83,10 @@
     <wsdl:operation name="listarEstado">
       <wsdl:input wsaw:Action="http://tempuri.org/IserviceUsers/listarEstado" message="tns:IserviceUsers_listarEstado_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IserviceUsers/listarEstadoResponse" message="tns:IserviceUsers_listarEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listarMotivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IserviceUsers/listarMotivo" message="tns:IserviceUsers_listarMotivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IserviceUsers/listarMotivoResponse" message="tns:IserviceUsers_listarMotivo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IserviceUsers" type="tns:IserviceUsers">
@@ -137,6 +147,15 @@
     </wsdl:operation>
     <wsdl:operation name="listarEstado">
       <soap:operation soapAction="http://tempuri.org/IserviceUsers/listarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarMotivo">
+      <soap:operation soapAction="http://tempuri.org/IserviceUsers/listarMotivo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

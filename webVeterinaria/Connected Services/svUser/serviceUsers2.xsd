@@ -97,4 +97,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="listarMotivo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listarMotivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/wcfVeterinaria" minOccurs="0" name="listarMotivoResult" nillable="true" type="q7:ArrayOfMotivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

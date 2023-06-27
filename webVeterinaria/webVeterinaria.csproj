@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="agendaInsert.aspx" />
     <None Include="Connected Services\svUser\serviceUsers.disco" />
     <None Include="Connected Services\svUser\configuration91.svcinfo" />
     <None Include="Connected Services\svUser\configuration.svcinfo" />
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="Acceso.Master.designer.cs">
       <DependentUpon>Acceso.Master</DependentUpon>
+    </Compile>
+    <Compile Include="agendaInsert.aspx.cs">
+      <DependentUpon>agendaInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agendaInsert.aspx.designer.cs">
+      <DependentUpon>agendaInsert.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\svUser\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -171,6 +179,9 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Connected Services\svUser\webVeterinaria.svUser.estadoUsu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\svUser\webVeterinaria.svUser.Motivo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\svUser\webVeterinaria.svUser.tipoUsu.datasource">

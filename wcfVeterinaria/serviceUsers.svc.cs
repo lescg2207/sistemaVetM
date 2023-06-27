@@ -138,6 +138,38 @@ namespace wcfVeterinaria
             return lista;
         }
 
+        public List<motivoE> listarMotivo()
+        {
+            List<motivoE> lista = new List<motivoE>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "spListarMotivo";
+                con.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lista.Add(new motivoE(int.Parse(reader[0].ToString()), reader[1].ToString()));
+                    }
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                con.Dispose();
+            }
+
+            return lista;
+        }
+
         public List<tipoUsu> listarTipo()
         {
             List<tipoUsu> lista = new List<tipoUsu>();

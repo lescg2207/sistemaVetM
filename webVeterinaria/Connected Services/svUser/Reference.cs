@@ -324,6 +324,67 @@ namespace webVeterinaria.svUser {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Motivo", Namespace="http://schemas.datacontract.org/2004/07/wcfVeterinaria")]
+    [System.SerializableAttribute()]
+    public partial class Motivo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="svUser.IserviceUsers")]
     public interface IserviceUsers {
@@ -369,6 +430,12 @@ namespace webVeterinaria.svUser {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IserviceUsers/listarEstado", ReplyAction="http://tempuri.org/IserviceUsers/listarEstadoResponse")]
         System.Threading.Tasks.Task<webVeterinaria.svUser.estadoUsu[]> listarEstadoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IserviceUsers/listarMotivo", ReplyAction="http://tempuri.org/IserviceUsers/listarMotivoResponse")]
+        webVeterinaria.svUser.Motivo[] listarMotivo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IserviceUsers/listarMotivo", ReplyAction="http://tempuri.org/IserviceUsers/listarMotivoResponse")]
+        System.Threading.Tasks.Task<webVeterinaria.svUser.Motivo[]> listarMotivoAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -452,6 +519,14 @@ namespace webVeterinaria.svUser {
         
         public System.Threading.Tasks.Task<webVeterinaria.svUser.estadoUsu[]> listarEstadoAsync() {
             return base.Channel.listarEstadoAsync();
+        }
+        
+        public webVeterinaria.svUser.Motivo[] listarMotivo() {
+            return base.Channel.listarMotivo();
+        }
+        
+        public System.Threading.Tasks.Task<webVeterinaria.svUser.Motivo[]> listarMotivoAsync() {
+            return base.Channel.listarMotivoAsync();
         }
     }
 }

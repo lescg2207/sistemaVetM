@@ -41,4 +41,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="estadoUsu" nillable="true" type="tns:estadoUsu" />
+  <xs:complexType name="ArrayOfMotivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Motivo" nillable="true" type="tns:Motivo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMotivo" nillable="true" type="tns:ArrayOfMotivo" />
+  <xs:complexType name="Motivo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Motivo" nillable="true" type="tns:Motivo" />
 </xs:schema>

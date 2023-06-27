@@ -30,5 +30,8 @@ namespace wcfVeterinaria
 
         [OperationContract]
         List<estadoUsu> listarEstado();
+
+        [OperationContract]
+        List<motivoE> listarMotivo();
     }
 }
