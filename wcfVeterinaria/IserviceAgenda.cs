@@ -17,5 +17,8 @@ namespace wcfVeterinaria
         [OperationContract]
         [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "ObtenerEventos")]
         List<Evento> ObtenerEventos();
+
+        [OperationContract]
+        List<Motivo> ListarMotivo();
     }
 }

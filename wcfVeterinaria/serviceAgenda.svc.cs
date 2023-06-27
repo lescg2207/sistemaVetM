@@ -12,6 +12,12 @@ namespace wcfVeterinaria
     public class serviceAgenda : IserviceAgenda
     {
         SqlConnection connection = new SqlConnection("Data Source=localhost;Initial Catalog=vet;User ID=sa;Password=les123");
+
+        public List<Motivo> ListarMotivo()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Evento> ObtenerEventos()
         {
             List<Evento> eventos = new List<Evento>();
