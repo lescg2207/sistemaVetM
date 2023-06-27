@@ -69,6 +69,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\ServicioAlmacen.wsdl" />
+    <None Include="Connected Services\ServiceReference1\ServicioAlmacen.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ServicioAlmacen1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ServicioAlmacen2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ServicioAlmacen3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\svUser\serviceUsers.disco" />
     <None Include="Connected Services\svUser\configuration91.svcinfo" />
     <None Include="Connected Services\svUser\configuration.svcinfo" />
@@ -77,6 +90,13 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="BuscarAlmacen.aspx" />
+    <None Include="Connected Services\ServiceReference1\ServicioAlmacen.disco" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="CrudAlmacen.aspx" />
     <Content Include="frmAgendaLista.aspx" />
     <Content Include="Inicio.aspx" />
@@ -110,6 +130,11 @@
     </Compile>
     <Compile Include="BuscarAlmacen.aspx.designer.cs">
       <DependentUpon>BuscarAlmacen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\svUser\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -198,6 +223,7 @@
     </Content>
     <None Include="packages.config" />
     <Content Include="Resources\css\Ultima Bold.ttf" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -209,6 +235,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
     <WCFMetadataStorage Include="Connected Services\svUser\" />
   </ItemGroup>
   <PropertyGroup>

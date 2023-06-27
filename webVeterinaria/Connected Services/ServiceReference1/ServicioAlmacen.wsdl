@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServicioAlmacen" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55676/ServicioAlmacen.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55676/ServicioAlmacen.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55676/ServicioAlmacen.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/wcfVeterinaria" />
+      <xsd:import schemaLocation="http://localhost:55676/ServicioAlmacen.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioAlmacen_AgregarAlmacen_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarAlmacen" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_AgregarAlmacen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgregarAlmacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_ElimnarAlmacen_InputMessage">
+    <wsdl:part name="parameters" element="tns:ElimnarAlmacen" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_ElimnarAlmacen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ElimnarAlmacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_ActualizarAlmacen_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarAlmacen" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_ActualizarAlmacen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarAlmacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_ObtenerAlmacen_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAlmacen" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_ObtenerAlmacen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAlmacenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_FetchUpdatedRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchUpdatedRecords" />
+  </wsdl:message>
+  <wsdl:message name="IServicioAlmacen_FetchUpdatedRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchUpdatedRecordsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioAlmacen">
+    <wsdl:operation name="AgregarAlmacen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioAlmacen/AgregarAlmacen" message="tns:IServicioAlmacen_AgregarAlmacen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioAlmacen/AgregarAlmacenResponse" message="tns:IServicioAlmacen_AgregarAlmacen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ElimnarAlmacen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioAlmacen/ElimnarAlmacen" message="tns:IServicioAlmacen_ElimnarAlmacen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioAlmacen/ElimnarAlmacenResponse" message="tns:IServicioAlmacen_ElimnarAlmacen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarAlmacen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioAlmacen/ActualizarAlmacen" message="tns:IServicioAlmacen_ActualizarAlmacen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioAlmacen/ActualizarAlmacenResponse" message="tns:IServicioAlmacen_ActualizarAlmacen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAlmacen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioAlmacen/ObtenerAlmacen" message="tns:IServicioAlmacen_ObtenerAlmacen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioAlmacen/ObtenerAlmacenResponse" message="tns:IServicioAlmacen_ObtenerAlmacen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchUpdatedRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioAlmacen/FetchUpdatedRecords" message="tns:IServicioAlmacen_FetchUpdatedRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioAlmacen/FetchUpdatedRecordsResponse" message="tns:IServicioAlmacen_FetchUpdatedRecords_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioAlmacen" type="tns:IServicioAlmacen">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AgregarAlmacen">
+      <soap:operation soapAction="http://tempuri.org/IServicioAlmacen/AgregarAlmacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ElimnarAlmacen">
+      <soap:operation soapAction="http://tempuri.org/IServicioAlmacen/ElimnarAlmacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarAlmacen">
+      <soap:operation soapAction="http://tempuri.org/IServicioAlmacen/ActualizarAlmacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAlmacen">
+      <soap:operation soapAction="http://tempuri.org/IServicioAlmacen/ObtenerAlmacen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchUpdatedRecords">
+      <soap:operation soapAction="http://tempuri.org/IServicioAlmacen/FetchUpdatedRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioAlmacen">
+    <wsdl:port name="BasicHttpBinding_IServicioAlmacen" binding="tns:BasicHttpBinding_IServicioAlmacen">
+      <soap:address location="http://localhost:55676/ServicioAlmacen.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
