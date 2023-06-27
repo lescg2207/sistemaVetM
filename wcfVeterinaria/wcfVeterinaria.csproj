@@ -78,9 +78,11 @@
     <Content Include="Global.asax" />
     <Content Include="serviceAgenda.svc" />
     <Content Include="serviceUsers.svc" />
+    <Content Include="ServicioAlmacen.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsAlmacen.cs" />
     <Compile Include="estadoUsu.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="Global.asax.cs">
@@ -88,12 +90,16 @@
     </Compile>
     <Compile Include="IserviceAgenda.cs" />
     <Compile Include="IserviceUsers.cs" />
+    <Compile Include="IServicioAlmacen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="serviceAgenda.svc.cs">
       <DependentUpon>serviceAgenda.svc</DependentUpon>
     </Compile>
     <Compile Include="serviceUsers.svc.cs">
       <DependentUpon>serviceUsers.svc</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioAlmacen.svc.cs">
+      <DependentUpon>ServicioAlmacen.svc</DependentUpon>
     </Compile>
     <Compile Include="tipoUsu.cs" />
     <Compile Include="Users.cs" />
