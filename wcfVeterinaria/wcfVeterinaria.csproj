@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="service.svc" />
     <Content Include="serviceAgenda.svc" />
     <Content Include="serviceAlmacen.svc" />
     <Content Include="serviceUsers.svc" />
@@ -88,10 +89,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IService.cs" />
     <Compile Include="IserviceAgenda.cs" />
     <Compile Include="IserviceAlmacen.cs" />
     <Compile Include="IserviceUsers.cs" />
+    <Compile Include="Motivo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="service.svc.cs">
+      <DependentUpon>service.svc</DependentUpon>
+    </Compile>
     <Compile Include="serviceAgenda.svc.cs">
       <DependentUpon>serviceAgenda.svc</DependentUpon>
     </Compile>

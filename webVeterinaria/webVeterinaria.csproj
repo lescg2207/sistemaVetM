@@ -69,10 +69,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\svAgenda\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\svAgenda\Service1.wsdl" />
+    <None Include="Connected Services\svAgenda\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\svAgenda\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\svAgenda\webVeterinaria.svAgenda.Motivo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\svUser\serviceUsers.disco" />
     <None Include="Connected Services\svUser\configuration91.svcinfo" />
     <None Include="Connected Services\svUser\configuration.svcinfo" />
     <None Include="Connected Services\svUser\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="agendaInsert.aspx" />
+    <None Include="Connected Services\svAgenda\service.disco" />
+    <None Include="Connected Services\svAgenda\configuration91.svcinfo" />
+    <None Include="Connected Services\svAgenda\configuration.svcinfo" />
+    <None Include="Connected Services\svAgenda\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -100,6 +121,18 @@
     </Compile>
     <Compile Include="Acceso.Master.designer.cs">
       <DependentUpon>Acceso.Master</DependentUpon>
+    </Compile>
+    <Compile Include="agendaInsert.aspx.cs">
+      <DependentUpon>agendaInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="agendaInsert.aspx.designer.cs">
+      <DependentUpon>agendaInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\svAgenda\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\svUser\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -192,6 +225,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\svAgenda\" />
     <WCFMetadataStorage Include="Connected Services\svUser\" />
   </ItemGroup>
   <PropertyGroup>

@@ -11,6 +11,7 @@ namespace wcfVeterinaria
    
     public class serviceAlmacen : IserviceAlmacen
     {
+        SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=vet;User ID=sa;Password=les123");
         public string ActualizarAlmacen(Almacen almacen, int id)
         {
             throw new NotImplementedException();
@@ -19,7 +20,7 @@ namespace wcfVeterinaria
         public string AgregarAlmacen(Almacen almacen)
         {
             string Message;
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-67GERHD\\SQLEXPRESS;Initial Catalog=vet;User ID=sa;Password=123456");
+            
 
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into ALMACEN(NOMBRE,PRESENTACION,PRECIO,STOCK,ESTADO) values(@1,@2,@3,@4,@5)", con);
@@ -44,7 +45,7 @@ namespace wcfVeterinaria
         public string EliminarAlmacen(int id)
         {
             string Message = "";
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-67GERHD\\SQLEXPRESS;Initial Catalog=vet;User ID=sa;Password=123456");
+            
 
             SqlCommand cmd = new SqlCommand("delete from Almace where IDITEM= '" + id + "'", con);
             con.Open();
@@ -65,7 +66,7 @@ namespace wcfVeterinaria
         {
 
             List<Almacen> ListAlma = new List<Almacen>();
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-67GERHD\\SQLEXPRESS;Initial Catalog=vet;User ID=sa;Password=123456");
+            
             SqlCommand cmd = new SqlCommand("select * from ALMACEN", con);
             con.Open();
             SqlDataReader reader = cmd.ExecuteReader();
