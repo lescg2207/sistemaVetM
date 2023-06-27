@@ -12,7 +12,7 @@ namespace wcfVeterinaria
 
     public class serviceUsers : IserviceUsers
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-8RD4SAJ\\SQLEXPRESS;Initial Catalog=vet;integrated Security=true;");
+        SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=vet;Uid=sa ;Password=les123");
         public string ActualizarUsuario(Users usuario, int id)
         {
             string MENSAJE;

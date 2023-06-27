@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -15,7 +17,34 @@ namespace wcfVeterinaria
 
         public List<Motivo> ListarMotivo()
         {
-            throw new NotImplementedException();
+            List<Motivo> lista = new List<Motivo>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = connection;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "spListarMotivo";
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        lista.Add(new Motivo(int.Parse(reader[0].ToString()), reader[1].ToString()));
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                connection.Dispose();
+            }
+
+            return lista;
         }
 
         public List<Evento> ObtenerEventos()

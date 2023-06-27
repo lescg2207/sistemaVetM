@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55676/serviceAgenda.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/wcfVeterinaria" />
+  <xs:element name="ObtenerEventos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEventosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/wcfVeterinaria" minOccurs="0" name="ObtenerEventosResult" nillable="true" type="q1:ArrayOfEvento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarMotivo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarMotivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/wcfVeterinaria" minOccurs="0" name="ListarMotivoResult" nillable="true" type="q2:ArrayOfMotivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
