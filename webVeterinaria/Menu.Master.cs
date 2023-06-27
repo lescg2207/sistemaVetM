@@ -13,7 +13,7 @@ namespace webVeterinaria
         {
             if (!IsPostBack)
             {
-                if (Session["userName"] != null)
+               /* if (Session["userName"] != null)
                 {
                     lblUser.Text = Session["userName"].ToString();
                     lblTipoUsu.Text = Session["tipoUsu"].ToString();
@@ -22,7 +22,7 @@ namespace webVeterinaria
                 {
                     Response.Redirect("Inicio.aspx");
                     
-                }
+                }*/
             }
             
 

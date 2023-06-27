@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace webVeterinaria.ServiceReference1 {
+namespace webVeterinaria.ServiceAlmacen {
     using System.Runtime.Serialization;
     using System;
     
@@ -139,26 +139,26 @@ namespace webVeterinaria.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IServicioAlmacen")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceAlmacen.IServicioAlmacen")]
     public interface IServicioAlmacen {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/AgregarAlmacen", ReplyAction="http://tempuri.org/IServicioAlmacen/AgregarAlmacenResponse")]
-        string AgregarAlmacen(webVeterinaria.ServiceReference1.clsAlmacen almacen);
+        string AgregarAlmacen(webVeterinaria.ServiceAlmacen.clsAlmacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/AgregarAlmacen", ReplyAction="http://tempuri.org/IServicioAlmacen/AgregarAlmacenResponse")]
-        System.Threading.Tasks.Task<string> AgregarAlmacenAsync(webVeterinaria.ServiceReference1.clsAlmacen almacen);
+        System.Threading.Tasks.Task<string> AgregarAlmacenAsync(webVeterinaria.ServiceAlmacen.clsAlmacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/ElimnarAlmacen", ReplyAction="http://tempuri.org/IServicioAlmacen/ElimnarAlmacenResponse")]
-        bool ElimnarAlmacen(webVeterinaria.ServiceReference1.clsAlmacen almacen);
+        bool ElimnarAlmacen(webVeterinaria.ServiceAlmacen.clsAlmacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/ElimnarAlmacen", ReplyAction="http://tempuri.org/IServicioAlmacen/ElimnarAlmacenResponse")]
-        System.Threading.Tasks.Task<bool> ElimnarAlmacenAsync(webVeterinaria.ServiceReference1.clsAlmacen almacen);
+        System.Threading.Tasks.Task<bool> ElimnarAlmacenAsync(webVeterinaria.ServiceAlmacen.clsAlmacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/ActualizarAlmacen", ReplyAction="http://tempuri.org/IServicioAlmacen/ActualizarAlmacenResponse")]
-        string ActualizarAlmacen(webVeterinaria.ServiceReference1.clsAlmacen almacen);
+        string ActualizarAlmacen(webVeterinaria.ServiceAlmacen.clsAlmacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/ActualizarAlmacen", ReplyAction="http://tempuri.org/IServicioAlmacen/ActualizarAlmacenResponse")]
-        System.Threading.Tasks.Task<string> ActualizarAlmacenAsync(webVeterinaria.ServiceReference1.clsAlmacen almacen);
+        System.Threading.Tasks.Task<string> ActualizarAlmacenAsync(webVeterinaria.ServiceAlmacen.clsAlmacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/ObtenerAlmacen", ReplyAction="http://tempuri.org/IServicioAlmacen/ObtenerAlmacenResponse")]
         System.Data.DataSet ObtenerAlmacen();
@@ -167,19 +167,19 @@ namespace webVeterinaria.ServiceReference1 {
         System.Threading.Tasks.Task<System.Data.DataSet> ObtenerAlmacenAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/FetchUpdatedRecords", ReplyAction="http://tempuri.org/IServicioAlmacen/FetchUpdatedRecordsResponse")]
-        System.Data.DataSet FetchUpdatedRecords(webVeterinaria.ServiceReference1.clsAlmacen almacen);
+        System.Data.DataSet FetchUpdatedRecords(webVeterinaria.ServiceAlmacen.clsAlmacen almacen);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioAlmacen/FetchUpdatedRecords", ReplyAction="http://tempuri.org/IServicioAlmacen/FetchUpdatedRecordsResponse")]
-        System.Threading.Tasks.Task<System.Data.DataSet> FetchUpdatedRecordsAsync(webVeterinaria.ServiceReference1.clsAlmacen almacen);
+        System.Threading.Tasks.Task<System.Data.DataSet> FetchUpdatedRecordsAsync(webVeterinaria.ServiceAlmacen.clsAlmacen almacen);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServicioAlmacenChannel : webVeterinaria.ServiceReference1.IServicioAlmacen, System.ServiceModel.IClientChannel {
+    public interface IServicioAlmacenChannel : webVeterinaria.ServiceAlmacen.IServicioAlmacen, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServicioAlmacenClient : System.ServiceModel.ClientBase<webVeterinaria.ServiceReference1.IServicioAlmacen>, webVeterinaria.ServiceReference1.IServicioAlmacen {
+    public partial class ServicioAlmacenClient : System.ServiceModel.ClientBase<webVeterinaria.ServiceAlmacen.IServicioAlmacen>, webVeterinaria.ServiceAlmacen.IServicioAlmacen {
         
         public ServicioAlmacenClient() {
         }
@@ -200,27 +200,27 @@ namespace webVeterinaria.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string AgregarAlmacen(webVeterinaria.ServiceReference1.clsAlmacen almacen) {
+        public string AgregarAlmacen(webVeterinaria.ServiceAlmacen.clsAlmacen almacen) {
             return base.Channel.AgregarAlmacen(almacen);
         }
         
-        public System.Threading.Tasks.Task<string> AgregarAlmacenAsync(webVeterinaria.ServiceReference1.clsAlmacen almacen) {
+        public System.Threading.Tasks.Task<string> AgregarAlmacenAsync(webVeterinaria.ServiceAlmacen.clsAlmacen almacen) {
             return base.Channel.AgregarAlmacenAsync(almacen);
         }
         
-        public bool ElimnarAlmacen(webVeterinaria.ServiceReference1.clsAlmacen almacen) {
+        public bool ElimnarAlmacen(webVeterinaria.ServiceAlmacen.clsAlmacen almacen) {
             return base.Channel.ElimnarAlmacen(almacen);
         }
         
-        public System.Threading.Tasks.Task<bool> ElimnarAlmacenAsync(webVeterinaria.ServiceReference1.clsAlmacen almacen) {
+        public System.Threading.Tasks.Task<bool> ElimnarAlmacenAsync(webVeterinaria.ServiceAlmacen.clsAlmacen almacen) {
             return base.Channel.ElimnarAlmacenAsync(almacen);
         }
         
-        public string ActualizarAlmacen(webVeterinaria.ServiceReference1.clsAlmacen almacen) {
+        public string ActualizarAlmacen(webVeterinaria.ServiceAlmacen.clsAlmacen almacen) {
             return base.Channel.ActualizarAlmacen(almacen);
         }
         
-        public System.Threading.Tasks.Task<string> ActualizarAlmacenAsync(webVeterinaria.ServiceReference1.clsAlmacen almacen) {
+        public System.Threading.Tasks.Task<string> ActualizarAlmacenAsync(webVeterinaria.ServiceAlmacen.clsAlmacen almacen) {
             return base.Channel.ActualizarAlmacenAsync(almacen);
         }
         
@@ -232,11 +232,11 @@ namespace webVeterinaria.ServiceReference1 {
             return base.Channel.ObtenerAlmacenAsync();
         }
         
-        public System.Data.DataSet FetchUpdatedRecords(webVeterinaria.ServiceReference1.clsAlmacen almacen) {
+        public System.Data.DataSet FetchUpdatedRecords(webVeterinaria.ServiceAlmacen.clsAlmacen almacen) {
             return base.Channel.FetchUpdatedRecords(almacen);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> FetchUpdatedRecordsAsync(webVeterinaria.ServiceReference1.clsAlmacen almacen) {
+        public System.Threading.Tasks.Task<System.Data.DataSet> FetchUpdatedRecordsAsync(webVeterinaria.ServiceAlmacen.clsAlmacen almacen) {
             return base.Channel.FetchUpdatedRecordsAsync(almacen);
         }
     }

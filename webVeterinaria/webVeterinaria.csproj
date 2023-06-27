@@ -69,17 +69,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\ServicioAlmacen.wsdl" />
-    <None Include="Connected Services\ServiceReference1\ServicioAlmacen.xsd">
+    <None Include="Connected Services\ServiceAlmacen\ServicioAlmacen.wsdl" />
+    <None Include="Connected Services\ServiceAlmacen\ServicioAlmacen.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\ServicioAlmacen1.xsd">
+    <None Include="Connected Services\ServiceAlmacen\ServicioAlmacen1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\ServicioAlmacen2.xsd">
+    <None Include="Connected Services\ServiceAlmacen\ServicioAlmacen2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\ServicioAlmacen3.xsd">
+    <None Include="Connected Services\ServiceAlmacen\ServicioAlmacen3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\svUser\serviceUsers.disco" />
@@ -89,15 +89,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="BuscarAlmacen.aspx" />
-    <None Include="Connected Services\ServiceReference1\ServicioAlmacen.disco" />
-    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
-    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+    <None Include="Connected Services\ServiceAlmacen\ServicioAlmacen.disco" />
+    <None Include="Connected Services\ServiceAlmacen\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceAlmacen\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceAlmacen\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="CrudAlmacen.aspx" />
+    <Content Include="BuscarAlmacen.aspx" />
+    <Content Include="CRUDALMACEN.aspx" />
     <Content Include="frmAgendaLista.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="libs\fullcalendar-6.1.8\dist\index.global.js" />
@@ -131,7 +131,7 @@
     <Compile Include="BuscarAlmacen.aspx.designer.cs">
       <DependentUpon>BuscarAlmacen.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+    <Compile Include="Connected Services\ServiceAlmacen\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -141,12 +141,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="CrudAlmacen.aspx.cs">
-      <DependentUpon>CrudAlmacen.aspx</DependentUpon>
+    <Compile Include="CRUDALMACEN.aspx.cs">
+      <DependentUpon>CRUDALMACEN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CrudAlmacen.aspx.designer.cs">
-      <DependentUpon>CrudAlmacen.aspx</DependentUpon>
+    <Compile Include="CRUDALMACEN.aspx.designer.cs">
+      <DependentUpon>CRUDALMACEN.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmAgendaLista.aspx.cs">
       <DependentUpon>frmAgendaLista.aspx</DependentUpon>
@@ -235,7 +235,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceAlmacen\" />
     <WCFMetadataStorage Include="Connected Services\svUser\" />
   </ItemGroup>
   <PropertyGroup>
